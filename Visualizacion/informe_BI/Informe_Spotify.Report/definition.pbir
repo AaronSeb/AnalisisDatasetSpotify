@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Informe_Spotify.Dataset"
+    },
+    "byConnection": null
+  }
+}

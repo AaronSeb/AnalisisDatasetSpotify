@@ -1,0 +1,1109 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"CancionTop10\",\"v_cancion_mas_popular\",\"v_canciones_x_artistas\",\"Top5xgenero\",\"Canciones_x_genero\",\"%canciones_letras_xplicit\",\"%genero_canciones_xplicit\",\"cancion_danseability\",\"cantidad_artists\",\"Total_canciones\",\"canciones_populares\",\"v_genero_mas_bailable\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.123.684.0 (23.11)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "es-ES",
+    "cultures": [
+      {
+        "name": "es-ES",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "v_canciones_x_artistas.artists": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "v_canciones_x_artistas",
+                    "ConceptualProperty": "artists"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Artistas": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "54746203-6f28-4e47-a3fa-23a7df1561e8",
+        "fromColumn": "artists",
+        "fromTable": "CancionTop10",
+        "toColumn": "artists",
+        "toTable": "v_canciones_x_artistas"
+      },
+      {
+        "name": "beebebf5-66cb-4e89-af4c-a9d5269b76c6",
+        "fromColumn": "track_genre",
+        "fromTable": "CancionTop10",
+        "toColumn": "track_genre",
+        "toTable": "Canciones_x_genero"
+      },
+      {
+        "name": "9853a073-b8ac-4890-93d3-b281a905de0a",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "track_genre",
+        "fromTable": "v_cancion_mas_popular",
+        "toColumn": "track_genre",
+        "toTable": "Canciones_x_genero"
+      },
+      {
+        "name": "0fde93ff-fe85-44c6-981e-2f878eff4353",
+        "fromColumn": "track_genre",
+        "fromTable": "Top5xgenero",
+        "toColumn": "track_genre",
+        "toTable": "Canciones_x_genero"
+      },
+      {
+        "name": "95b7271e-61ff-4ea5-886c-8dcd0fb73042",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "track_genre",
+        "fromTable": "%genero_canciones_xplicit",
+        "toColumn": "track_genre",
+        "toTable": "Canciones_x_genero"
+      },
+      {
+        "name": "c42fe4fb-1bd4-44c7-9820-2e11ef395f48",
+        "fromColumn": "track_name",
+        "fromTable": "CancionTop10",
+        "toColumn": "track_name",
+        "toTable": "cancion_danseability"
+      },
+      {
+        "name": "c58836a4-0629-4956-912f-545e0c7611cf",
+        "fromColumn": "track_name",
+        "fromTable": "v_cancion_mas_popular",
+        "isActive": false,
+        "toColumn": "track_name",
+        "toTable": "cancion_danseability"
+      },
+      {
+        "name": "bc6d0cd7-2a50-4c9d-ac9b-3f17aef351ad",
+        "fromColumn": "track_name",
+        "fromTable": "Top5xgenero",
+        "toColumn": "track_name",
+        "toTable": "cancion_danseability"
+      },
+      {
+        "name": "3ca32606-9b0a-4233-b436-9187f227fe07",
+        "fromColumn": "track_name",
+        "fromTable": "canciones_populares",
+        "toColumn": "track_name",
+        "toTable": "cancion_danseability"
+      },
+      {
+        "name": "638f8f8d-4ed3-406f-8d87-53c74793f80e",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "track_genre",
+        "fromTable": "v_genero_mas_bailable",
+        "toColumn": "track_genre",
+        "toTable": "Canciones_x_genero"
+      }
+    ],
+    "sourceQueryCulture": "es-PE",
+    "tables": [
+      {
+        "name": "CancionTop10",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "track_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "60dae437-d383-445d-b753-dd3730add59f",
+            "sourceColumn": "track_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "artists",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "43c3393d-7efe-49fb-b10c-56cbf2adfd55",
+            "sourceColumn": "artists",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "track_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1165d724-eb30-4cee-82f1-38ae8a2b4418",
+            "sourceColumn": "track_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "track_genre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "15dc1bef-5952-4956-a66c-a265e25b4ceb",
+            "sourceColumn": "track_genre",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "popularity",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9806abf4-e743-48cc-a70f-e05968fbb224",
+            "sourceColumn": "popularity",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "rnk",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0047a197-57c5-40e1-9b38-602db03e4a25",
+            "sourceColumn": "rnk",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "a0880e82-9485-498f-9bed-504a4a95d3d3",
+        "partitions": [
+          {
+            "name": "CancionTop10",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Sql.Database(\"DESKTOP-H4JG0J8\", \"DB_Spotify\", [Query=\"WITH ranking AS(#(lf)#(tab)SELECT track_id,artists,track_name,track_genre, popularity,DENSE_RANK() OVER(ORDER BY popularity DESC) as rnk#(lf)#(tab)FROM [dbo].[data_new_spotify]#(lf)#(tab))#(lf)#(lf)#(tab)SELECT * FROM ranking#(lf)#(tab)WHERE rnk<=10#(lf)#(tab)ORDER BY rnk;\"])",
+                "in",
+                "    Origen"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_7754f807-2c88-40c8-9134-d6fc1bcacc91",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "9f613936-3a23-4c66-af58-9a0e246c2a09",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Año",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "2d9f4a94-0e6f-45bb-a6f6-190f8ca7b82d",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NroMes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "0ed1c514-f80b-4122-9537-1cb88d98c225",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "fdbf3f07-04c5-411f-b63a-c059add29b2d",
+            "sortByColumn": "NroMes",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NroTrimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([NroMes] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "59797ab4-fe5d-46f5-a258-7a2400231709",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Trim. \" & [NroTrimestre]",
+            "isHidden": true,
+            "lineageTag": "c8a6e6db-74ee-4360-ab74-e43ea6af646b",
+            "sortByColumn": "NroTrimestre",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Día",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "f5b50733-6887-42a7-928b-677887e5df4a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Jerarquía de fechas",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Año",
+                "column": "Año",
+                "lineageTag": "7eeaf454-0d53-4d03-a833-2caa1cea8590",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "80ba71b0-e65b-49a3-8074-eaffbfa99f6f",
+                "ordinal": 1
+              },
+              {
+                "name": "Mes",
+                "column": "Mes",
+                "lineageTag": "76b95305-7140-4379-b69e-ba261e2ce5a5",
+                "ordinal": 2
+              },
+              {
+                "name": "Día",
+                "column": "Día",
+                "lineageTag": "fe45f94f-270b-49e0-a236-b966ba593416",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "f842fa7c-97e5-4a62-ab77-0fee71e7d4f9"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "8528b83a-b193-438e-b42b-7c4d364f997d",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_7754f807-2c88-40c8-9134-d6fc1bcacc91",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "v_cancion_mas_popular",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "track_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ab5be974-83c3-4cec-b506-d8542c00c8b0",
+            "sourceColumn": "track_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "popularity",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0edeac24-b7a8-417c-8678-41e2a80a5e66",
+            "sourceColumn": "popularity",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "track_genre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "52ea2db8-3bc7-403a-9358-0fa554ffec7d",
+            "sourceColumn": "track_genre",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3c1ffe51-33bc-4776-8e36-bf9a39bd0959",
+        "partitions": [
+          {
+            "name": "v_cancion_mas_popular",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Sql.Database(\"DESKTOP-H4JG0J8\", \"DB_Spotify\"),",
+                "    dbo_v_cancion_mas_popular = Origen{[Schema=\"dbo\",Item=\"v_cancion_mas_popular\"]}[Data]",
+                "in",
+                "    dbo_v_cancion_mas_popular"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "v_canciones_x_artistas",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "artists",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "febf0d9d-fbd0-4850-af88-97c4580e2f1f",
+            "sourceColumn": "artists",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CANCIONES",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4fdabb83-dcbe-4157-9db1-15c18faf2e60",
+            "sourceColumn": "CANCIONES",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "8c8c79f5-d009-46db-9432-9048dea9db95",
+        "partitions": [
+          {
+            "name": "v_canciones_x_artistas",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Sql.Database(\"DESKTOP-H4JG0J8\", \"DB_Spotify\"),",
+                "    dbo_v_canciones_x_artistas = Origen{[Schema=\"dbo\",Item=\"v_canciones_x_artistas\"]}[Data]",
+                "in",
+                "    dbo_v_canciones_x_artistas"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Top5xgenero",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "track_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d3a0c069-2b1a-4b18-9220-27568b5a1247",
+            "sourceColumn": "track_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "track_genre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "40a23917-6c80-49a2-97d3-426ead287391",
+            "sourceColumn": "track_genre",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "popularity",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d83ad491-bab2-46c8-80f1-d797ba6545aa",
+            "sourceColumn": "popularity",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "rnk",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "18ad1991-a3e1-4c0f-9f2e-6c7798febc22",
+            "sourceColumn": "rnk",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "91b0c7a7-f92c-44e3-9f1e-1085cd270e35",
+        "partitions": [
+          {
+            "name": "Top5xgenero",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Sql.Database(\"DESKTOP-H4JG0J8\", \"DB_Spotify\", [Query=\"WITH cancionesxgenero AS(#(lf)#(tab)SELECT DISTINCT track_name,track_genre, popularity#(lf)#(tab)FROM [dbo].[data_new_spotify]#(lf)#(tab)GROUP BY track_genre,track_name,popularity#(lf))#(lf)SELECT * #(lf)FROM#(lf)#(tab)(#(lf)#(tab)#(tab)SELECT *, RANK() OVER(PARTITION BY track_genre ORDER BY popularity DESC) as rnk#(lf)#(tab)#(tab)FROM cancionesxgenero#(lf)#(tab)) AS C1#(lf)WHERE rnk<=5;\"])",
+                "in",
+                "    Origen"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Canciones_x_genero",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "track_genre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cfc8ccbd-e52e-443e-8777-ddd7f963c2a2",
+            "sourceColumn": "track_genre",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_canciones",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "478a6955-cf25-4d20-b090-47cd5d06a2d5",
+            "sourceColumn": "total_canciones",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "b9a4a0ea-8912-4285-9b21-5bfeebd5ef3f",
+        "partitions": [
+          {
+            "name": "Canciones_x_genero",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Sql.Database(\"DESKTOP-H4JG0J8\", \"DB_Spotify\", [Query=\"SELECT track_genre,COUNT(DISTINCT track_id) total_canciones#(lf)FROM data_new_spotify#(lf)GROUP BY track_genre#(lf)ORDER BY total_canciones DESC;\"])",
+                "in",
+                "    Origen"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "%canciones_letras_xplicit",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "PERCENT_EXPLICIT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "335d5338-9e1f-46f8-882b-7fd205701501",
+            "sourceColumn": "PERCENT_EXPLICIT",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "PERCENT_EXPLICIT2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "0121d1c6-239f-425a-bba5-f50b3576714e",
+            "sourceColumn": "PERCENT_EXPLICIT2",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "d36a25de-ba03-4e7e-a4b9-0f04d50f1d9a",
+        "partitions": [
+          {
+            "name": "%canciones_letras_xplicit",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Sql.Database(\"DESKTOP-H4JG0J8\", \"DB_Spotify\", [Query=\"SELECT (CAST(T1.EXPLICIT AS FLOAT)/T1.TOTAL)*100 AS PERCENT_EXPLICIT,#(lf)(CAST(T1.NO_EXPLICIT AS FLOAT)/T1.TOTAL)*100 AS PERCENT_EXPLICIT#(lf)FROM#(lf)#(tab)(SELECT #(lf)#(tab)#(tab)COUNT(CASE WHEN explicit =1 THEN 1 END) AS EXPLICIT,#(lf)#(tab)#(tab)COUNT(CASE WHEN explicit =0 THEN 1 END) AS NO_EXPLICIT,#(lf)#(tab)#(tab)COUNT(*)AS TOTAL#(lf)#(tab)FROM data_new_spotify#(lf)#(tab)) AS T1;\"])",
+                "in",
+                "    Origen"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "%genero_canciones_xplicit",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "track_genre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7332697b-778e-4408-afc5-dd34995b67c7",
+            "sourceColumn": "track_genre",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Explicito",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "b82ebad2-23e5-4419-b987-b13852832a21",
+            "sourceColumn": "Explicito",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "No explicito",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "04b3a2f4-6912-455a-b0db-3207fe4ad176",
+            "sourceColumn": "No explicito",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "7e22508e-9790-41e4-a555-7b14389a6780",
+        "partitions": [
+          {
+            "name": "%genero_canciones_xplicit",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Sql.Database(\"DESKTOP-H4JG0J8\", \"DB_Spotify\", [Query=\"WITH group_genero_explicit AS(#(lf)#(tab)SELECT #(lf)#(tab)track_genre,#(lf)#(tab)COUNT(CASE WHEN explicit =1 THEN 1 END) AS EXPLICIT,#(lf)#(tab)COUNT(CASE WHEN explicit =0 THEN 1 END) AS NO_EXPLICIT,#(lf)#(tab)COUNT(*)AS TOTAL#(lf)#(tab)FROM data_new_spotify#(lf)#(tab)GROUP BY track_genre)#(lf)#(lf)#(tab)SELECT#(lf)#(tab)track_genre,#(lf)#(tab)(CAST(EXPLICIT AS FLOAT)/TOTAL)*100 AS PORCENTAJE_EXPLICIT,#(lf)#(tab)(CAST(NO_EXPLICIT AS FLOAT)/TOTAL)*100 AS PORCENTAJE_NO_EXPLICIT#(lf)#(tab)FROM group_genero_explicit#(lf)#(tab)ORDER BY PORCENTAJE_EXPLICIT DESC\"]),",
+                "    #\"Columnas con nombre cambiado\" = Table.RenameColumns(Origen,{{\"PORCENTAJE_EXPLICIT\", \"Explicito\"}, {\"PORCENTAJE_NO_EXPLICIT\", \"No explicito\"}})",
+                "in",
+                "    #\"Columnas con nombre cambiado\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "cancion_danseability",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "track_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8d491398-0453-45d0-8a74-cc245ebb478a",
+            "sourceColumn": "track_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Danceability",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "de10445c-8463-451e-80fd-ae2f60bada9f",
+            "sourceColumn": "Danceability",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "40484f07-8175-432d-82a7-d1e88e678fb0",
+        "partitions": [
+          {
+            "name": "cancion_danseability",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Sql.Database(\"DESKTOP-H4JG0J8\", \"DB_Spotify\", [Query=\"SELECT track_name, MAX(danceability) Danceability#(lf)FROM#(lf)data_new_spotify#(lf)GROUP BY track_name#(lf)ORDER BY MAX(danceability) desc;#(lf)#(lf)SELECT track_name,danceability#(lf)FROM datos_spotify#(lf)WHERE danceability = (#(lf)#(tab)SELECT MAX(danceability)#(lf)#(tab)from data_new_spotify#(lf)#(tab))\"])",
+                "in",
+                "    Origen"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "cantidad_artists",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "CANTIDAD_ARTISTAS",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "8aabd347-4a4a-42eb-b3b3-4b424447cda5",
+            "sourceColumn": "CANTIDAD_ARTISTAS",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "7b3b6e49-d165-4796-a87f-b2e782709ef0",
+        "partitions": [
+          {
+            "name": "cantidad_artists",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Sql.Database(\"DESKTOP-H4JG0J8\", \"DB_Spotify\", [Query=\"SELECT COUNT(DISTINCT(artists)) CANTIDAD_ARTISTAS#(lf)FROM data_new_spotify;\"])",
+                "in",
+                "    Origen"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Total_canciones",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "CANTIDAD_CANCIONES",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "49f6aee1-50ff-44cd-9bc9-a5891e96f34f",
+            "sourceColumn": "CANTIDAD_CANCIONES",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "e9d66bf9-1b9b-4e89-93a3-c663ed168977",
+        "partitions": [
+          {
+            "name": "Total_canciones",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Sql.Database(\"DESKTOP-H4JG0J8\", \"DB_Spotify\", [Query=\"SELECT COUNT(DISTINCT(track_name)) CANTIDAD_CANCIONES#(lf)FROM data_new_spotify;\"])",
+                "in",
+                "    Origen"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "canciones_populares",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "track_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d3d50f61-ea28-48b5-a9e9-922494d4da1a",
+            "sourceColumn": "track_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "popularity",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "bb2adfe0-8596-48c5-8498-84d15dda6fef",
+            "sourceColumn": "popularity",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "2b0ea97f-845c-4f45-ae45-003c4f6ca1c1",
+        "partitions": [
+          {
+            "name": "canciones_populares",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Sql.Database(\"DESKTOP-H4JG0J8\", \"DB_Spotify\", [Query=\"SELECT DISTINCT(track_name), popularity#(lf)FROM data_new_spotify#(lf)ORDER BY popularity DESC;\"])",
+                "in",
+                "    Origen"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "v_genero_mas_bailable",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "track_genre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "279b2bb1-5ebd-4d22-b46e-f5ffd316ea14",
+            "sourceColumn": "track_genre",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TOTAL_DANCEABILITY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "c440ce5a-5622-4103-8b75-e9c70af245f1",
+            "sourceColumn": "TOTAL_DANCEABILITY",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "3016c25a-58ad-4788-9515-2601a806262d",
+        "partitions": [
+          {
+            "name": "v_genero_mas_bailable",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Sql.Database(\"DESKTOP-H4JG0J8\", \"DB_Spotify\"),",
+                "    dbo_v_genero_mas_bailable = Origen{[Schema=\"dbo\",Item=\"v_genero_mas_bailable\"]}[Data]",
+                "in",
+                "    dbo_v_genero_mas_bailable"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

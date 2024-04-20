@@ -1,0 +1,171 @@
+{
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.49\",\"type\":2},\"customTheme\":{\"name\":\"AccessibleDefault\",\"version\":\"5.49\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSectionbce71615a74062e1dabe",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "Pod1"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "AccessibleDefault",
+            "path": "BuiltInThemes/AccessibleDefault.json",
+            "type": 201
+          },
+          {
+            "name": "CY23SU11",
+            "path": "BaseThemes/CY23SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Presentacion9560672451394656.jpg",
+            "path": "Presentacion9560672451394656.jpg",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Página 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection414d4e2054740052d1e8",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1b9204945e7420001c38\",\"layouts\":[{\"id\":0,\"position\":{\"x\":347.2340425531915,\"y\":25.288753799392097,\"z\":1000,\"width\":466.8693009118541,\"height\":75.86626139817629,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"REPORTE DE DATASET DE SPOTIFY\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"20pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 75.87,
+          "width": 466.87,
+          "x": 347.23,
+          "y": 25.29,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"270858f209b83ba76d00\",\"layouts\":[{\"id\":0,\"position\":{\"x\":379.3313069908815,\"y\":156.59574468085108,\"z\":0,\"width\":382.24924012158056,\"height\":405.5927051671733,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Top5xgenero.track_genre\",\"active\":true},{\"queryRef\":\"Top5xgenero.track_name\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(Top5xgenero.popularity)\"},{\"queryRef\":\"Sum(Top5xgenero.rnk)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Top5xgenero\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"track_genre\"},\"Name\":\"Top5xgenero.track_genre\",\"NativeReferenceName\":\"Género\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"track_name\"},\"Name\":\"Top5xgenero.track_name\",\"NativeReferenceName\":\"track_name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"popularity\"}},\"Function\":0},\"Name\":\"Sum(Top5xgenero.popularity)\",\"NativeReferenceName\":\"Popularity\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"rnk\"}},\"Function\":0},\"Name\":\"Sum(Top5xgenero.rnk)\",\"NativeReferenceName\":\"Ranking\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"rnk\"}},\"Function\":0}}}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Top5xgenero.track_genre\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Top5xgenero\"}},\"Property\":\"track_genre\"}}],\"isPinned\":true},{\"queryRefs\":[\"Top5xgenero.track_name\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'world-music'\"}}],\"isToggled\":true},{\"identityValues\":[{\"Literal\":{\"Value\":\"'hip-hop'\"}}],\"isToggled\":true},{\"identityValues\":[{\"Literal\":{\"Value\":\"'sertanejo'\"}}],\"isToggled\":true},{\"identityValues\":[{\"Literal\":{\"Value\":\"'dancehall'\"}}],\"isToggled\":true}]}}],\"columnProperties\":{\"Top5xgenero.track_genre\":{\"displayName\":\"Género\"},\"Sum(Top5xgenero.popularity)\":{\"displayName\":\"Popularity\"},\"Sum(Top5xgenero.rnk)\":{\"displayName\":\"Ranking\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"subTotals\":[{\"properties\":{\"columnSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"rowSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"231.08815632376562D\"}}}},\"selector\":{\"metadata\":\"Top5xgenero.track_genre\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Top 5 de las canciones más populares por género'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 405.59,
+          "width": 382.25,
+          "x": 379.33,
+          "y": 156.60,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"relationships\":[{\"source\":\"e8e779c0054a26581e0c\",\"target\":\"1652a6a766d0958855a9\",\"type\":3},{\"source\":\"1652a6a766d0958855a9\",\"target\":\"59d9e500e8045a1085be\",\"type\":3}],\"objects\":{\"background\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Presentacion.jpg'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Presentacion9560672451394656.jpg\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Fit'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}]}}",
+      "displayName": "Página 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionbce71615a74062e1dabe",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1652a6a766d0958855a9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":779.0881458966566,\"y\":381.2765957446809,\"z\":7000,\"width\":460.0607902735563,\"height\":226.6261398176292,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"v_genero_mas_bailable.track_genre\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(v_genero_mas_bailable.TOTAL_DANCEABILITY)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"v_genero_mas_bailable\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"track_genre\"},\"Name\":\"v_genero_mas_bailable.track_genre\",\"NativeReferenceName\":\"track_genre\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"TOTAL_DANCEABILITY\"}},\"Function\":0},\"Name\":\"Sum(v_genero_mas_bailable.TOTAL_DANCEABILITY)\",\"NativeReferenceName\":\"Suma de TOTAL_DANCEABILITY\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"TOTAL_DANCEABILITY\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Géneros más bailables'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"v_genero_mas_bailable\"}},\"Property\":\"track_genre\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"v_genero_mas_bailable\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"track_genre\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"TOTAL_DANCEABILITY\"}},\"Function\":0}}}],\"Top\":5}}},\"Type\":2},{\"Name\":\"v\",\"Entity\":\"v_genero_mas_bailable\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"track_genre\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 226.63,
+          "width": 460.06,
+          "x": 779.09,
+          "y": 381.28,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"327a6adb19c80d49c541\",\"layouts\":[{\"id\":0,\"position\":{\"x\":321.9452887537994,\"y\":58.358662613981764,\"z\":4000,\"width\":529.1185410334347,\"height\":186.74772036474164,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"canciones_populares.track_name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Max(canciones_populares.popularity)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"canciones_populares\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"track_name\"},\"Name\":\"canciones_populares.track_name\",\"NativeReferenceName\":\"track_name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"popularity\"}},\"Function\":4},\"Name\":\"Max(canciones_populares.popularity)\",\"NativeReferenceName\":\"Máx. de popularity\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"popularity\"}},\"Function\":4}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Canciones más populares'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"canciones_populares\"}},\"Property\":\"track_name\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"canciones_populares\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"track_name\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"popularity\"}},\"Function\":4}}}],\"Top\":5}}},\"Type\":2},{\"Name\":\"c\",\"Entity\":\"canciones_populares\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"track_name\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 186.75,
+          "width": 529.12,
+          "x": 321.95,
+          "y": 58.36,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"3ee8a32eb3c8782c04ab\",\"layouts\":[{\"id\":0,\"position\":{\"x\":18.480243161094226,\"y\":58.358662613981764,\"z\":3000,\"width\":268.4498480243161,\"height\":170.2127659574468,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"v_canciones_x_artistas.artists\"},{\"queryRef\":\"CountNonNull(v_canciones_x_artistas.CANCIONES)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"v_canciones_x_artistas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"artists\"},\"Name\":\"v_canciones_x_artistas.artists\",\"NativeReferenceName\":\"Artistas\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"CANCIONES\"}},\"Function\":0},\"Name\":\"CountNonNull(v_canciones_x_artistas.CANCIONES)\",\"NativeReferenceName\":\"Total de canciones\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"CANCIONES\"}},\"Function\":0}}}]},\"columnProperties\":{\"v_canciones_x_artistas.artists\":{\"displayName\":\"Artistas\"},\"CountNonNull(v_canciones_x_artistas.CANCIONES)\":{\"displayName\":\"Total de canciones\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"121.58513849260859D\"}}}},\"selector\":{\"metadata\":\"v_canciones_x_artistas.artists\"}}],\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'5 artistas con más canciones'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Heading3'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"v_canciones_x_artistas\"}},\"Property\":\"artists\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"v_canciones_x_artistas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"artists\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"CANCIONES\"}},\"Function\":0}}}],\"Top\":5}}},\"Type\":2},{\"Name\":\"v\",\"Entity\":\"v_canciones_x_artistas\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"artists\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 170.21,
+          "width": 268.45,
+          "x": 18.48,
+          "y": 58.36,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"3f17272630655cc396b2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":929.8480243161094,\"y\":58.358662613981764,\"z\":1000,\"width\":260.66869300911856,\"height\":111.85410334346506,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Total_canciones.CANTIDAD_CANCIONES)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total_canciones\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"CANTIDAD_CANCIONES\"}},\"Function\":0},\"Name\":\"Sum(Total_canciones.CANTIDAD_CANCIONES)\",\"NativeReferenceName\":\"Suma de CANTIDAD_CANCIONES\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"CANTIDAD_CANCIONES\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total de canciones'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 111.85,
+          "width": 260.67,
+          "x": 929.85,
+          "y": 58.36,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"59d9e500e8045a1085be\",\"layouts\":[{\"id\":0,\"position\":{\"x\":475.62310030395133,\"y\":381.27659574468186,\"z\":6000,\"width\":303.46504559270517,\"height\":254.8328267477204,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(%genero_canciones_xplicit.Explicito)\"},{\"queryRef\":\"Sum(%genero_canciones_xplicit.No explicito)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"%\",\"Entity\":\"%genero_canciones_xplicit\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"%\"}},\"Property\":\"Explicito\"}},\"Function\":0},\"Name\":\"Sum(%genero_canciones_xplicit.Explicito)\",\"NativeReferenceName\":\"Explicito\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"%\"}},\"Property\":\"No explicito\"}},\"Function\":0},\"Name\":\"Sum(%genero_canciones_xplicit.No explicito)\",\"NativeReferenceName\":\"No explicito\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"%\"}},\"Property\":\"Explicito\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(%genero_canciones_xplicit.Explicito)\":{\"displayName\":\"Explicito\"},\"Sum(%genero_canciones_xplicit.No explicito)\":{\"displayName\":\"No explicito\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'TopCenter'\"}}}}}],\"labels\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'inside'\"}}},\"overflow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Percent of total'\"}}},\"background\":{\"expr\":{\"Literal\":{\"Value\":\"'off'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtereea2f005341840713104\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"%genero_canciones_xplicit\"}},\"Property\":\"track_genre\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"requireSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+          "height": 254.83,
+          "width": 303.47,
+          "x": 475.62,
+          "y": 381.28,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"78cbb9770058b9840272\",\"layouts\":[{\"id\":0,\"position\":{\"x\":27.23404255319149,\"y\":383.2218844984803,\"z\":5000,\"width\":275.258358662614,\"height\":224.6808510638298,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(%canciones_letras_xplicit.PERCENT_EXPLICIT)\"},{\"queryRef\":\"Sum(%canciones_letras_xplicit.PERCENT_EXPLICIT2)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"%\",\"Entity\":\"%canciones_letras_xplicit\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"%\"}},\"Property\":\"PERCENT_EXPLICIT\"}},\"Function\":0},\"Name\":\"Sum(%canciones_letras_xplicit.PERCENT_EXPLICIT)\",\"NativeReferenceName\":\"Explicitas\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"%\"}},\"Property\":\"PERCENT_EXPLICIT2\"}},\"Function\":0},\"Name\":\"Sum(%canciones_letras_xplicit.PERCENT_EXPLICIT2)\",\"NativeReferenceName\":\"No explicitas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"%\"}},\"Property\":\"PERCENT_EXPLICIT\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(%canciones_letras_xplicit.PERCENT_EXPLICIT)\":{\"displayName\":\"Explicitas\"},\"Sum(%canciones_letras_xplicit.PERCENT_EXPLICIT2)\":{\"displayName\":\"No explicitas\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'LeftCenter'\"}}}}}],\"labels\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'outside'\"}}},\"overflow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"labelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Percent of total'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Porcentaje de letras del total de canciones'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 224.68,
+          "width": 275.26,
+          "x": 27.23,
+          "y": 383.22,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"a38d1314c370ca480234\",\"layouts\":[{\"id\":0,\"position\":{\"x\":49.6048632218845,\"y\":0,\"z\":0,\"width\":598.1762917933131,\"height\":50.577507598784194,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"REPORTE DE DATASET DE SPOTIFY\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"20pt\"}}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 50.58,
+          "width": 598.18,
+          "x": 49.60,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b0a46cbaa04d17d77003\",\"layouts\":[{\"id\":0,\"position\":{\"x\":944.4376899696049,\"y\":212.03647416413375,\"z\":2000,\"width\":230.51671732522797,\"height\":109.90881458966565,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(cantidad_artists.CANTIDAD_ARTISTAS)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"cantidad_artists\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CANTIDAD_ARTISTAS\"}},\"Function\":0},\"Name\":\"Sum(cantidad_artists.CANTIDAD_ARTISTAS)\",\"NativeReferenceName\":\"Suma de CANTIDAD_ARTISTAS\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CANTIDAD_ARTISTAS\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Cantidad de artistas'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 109.91,
+          "width": 230.52,
+          "x": 944.44,
+          "y": 212.04,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"e8e779c0054a26581e0c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":370.57750759878417,\"y\":383.22188449848124,\"z\":8000,\"width\":168.26747720364742,\"height\":198.419452887538,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"%genero_canciones_xplicit.track_genre\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"%\",\"Entity\":\"%genero_canciones_xplicit\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"%\"}},\"Property\":\"track_genre\"},\"Name\":\"%genero_canciones_xplicit.track_genre\",\"NativeReferenceName\":\"track_genre\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"%\",\"Entity\":\"%genero_canciones_xplicit\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"%\"}},\"Property\":\"track_genre\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'anime'\"}}]]}}}]}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Filtro por género'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 198.42,
+          "width": 168.27,
+          "x": 370.58,
+          "y": 383.22,
+          "z": 8000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "AccessibleDefault"
+}
